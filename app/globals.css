@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-alt: #f4f4f4;
+  --line: #dcdcdc;
+  --fg: #000000;
+  --fg-2: #5a5a5a;
+  --fg-3: #8c8c8c;
+  --accent: #0f6b66;
+  --accent-fg: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: #000000;
+    --surface: #000000;
+    --surface-alt: #121212;
+    --line: #303030;
+    --fg: #ffffff;
+    --fg-2: #a8a8a8;
+    --fg-3: #707070;
+    --accent: #4fc3b8;
+    --accent-fg: #000000;
   }
 }
 
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-fg-2: var(--fg-2);
+  --color-fg-3: var(--fg-3);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-bodoni);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
 }
